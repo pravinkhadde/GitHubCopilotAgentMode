@@ -38,6 +38,7 @@ def api_root(request):
     })
 
 urlpatterns = [
+    path('', api_root, name='root'),
     path('admin/', admin.site.urls),
     path('api/', api_root, name='api-root'),
     path('api/auth/', include('dj_rest_auth.urls')),
